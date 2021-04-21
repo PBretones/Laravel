@@ -12,7 +12,7 @@ class PagesController extends Controller
     }
 
     public function notas(){
-        $notas = Nota::all();
+        $notas = Nota::simplePaginate(3);
         return view('notas',compact('notas'));
     }
 

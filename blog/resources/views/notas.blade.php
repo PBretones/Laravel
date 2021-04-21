@@ -25,7 +25,7 @@
 {{session('message')}}
 </div>
 @endif
-<form  method="POST" action="{{route('notas.crear')}}">
+<form  class="py-4" method="POST" action="{{route('notas.crear')}}">
 
 @csrf
 
@@ -41,14 +41,14 @@
   <input type="text" placeholder="descripcion" name="desc" class="form-control mb-2" value="{{old('desc')}}">
   <button class="btn btn-primary form-control" type="submit">Añadir</button>
   </form>
-<table class="table">
+<table class="table table-dark table-striped">
 
   <thead>
     <tr>
-      <th scope="col">#id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Desc</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -71,6 +71,7 @@
     @endforeach()
     </tbody>
 </table>
+{{$notas->links()}}
 </div>
 
 @endsection

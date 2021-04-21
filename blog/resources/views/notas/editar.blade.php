@@ -17,6 +17,6 @@
 @enderror
   <input type="text" placeholder="name" name="name" class="form-control mb-2" value="{{$notas->name}}">
   <input type="text" placeholder="descripcion" name="desc" class="form-control mb-2" value="{{$notas->desc}}">
-  <button class="btn btn-warning form-control" type="submit">Editar</button>
+  <button class="btn btn-success form-control" type="submit">Editar</button>
   </form>
 @endsection
